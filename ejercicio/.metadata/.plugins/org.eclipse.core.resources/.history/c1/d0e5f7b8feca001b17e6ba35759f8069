@@ -1,0 +1,27 @@
+package com.demo.springboot.app.productos.models.service;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.springboot.app.productos.models.dao.PriceDao;
+import com.demo.springboot.app.productos.models.entity.Price;
+
+@Service
+public class PriceServiceImpl implements IPriceService{
+	
+	@Autowired
+	private PriceDao priceDao;
+
+	@Override
+	public Price findProductByfilters(LocalDateTime localDateTime, Long idProduct, Long IdBrand) {
+		// TODO Auto-generated method stub
+		priceDao.getPriceByFilters(localDateTime, IdBrand, idProduct);
+		return null;
+	}
+	
+	
+	
+
+}

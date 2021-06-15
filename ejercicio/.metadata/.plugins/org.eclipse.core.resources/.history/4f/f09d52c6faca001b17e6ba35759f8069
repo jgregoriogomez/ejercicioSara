@@ -1,0 +1,31 @@
+package com.demo.springboot.app.productos;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.LocalDateTime;
+import java.time.Month;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.demo.springboot.app.productos.controllers.PriceController;
+
+@SpringBootTest
+class DemoConsultaPricesApplicationTests {
+
+	@Autowired
+	private PriceController controller;
+	
+	@Test
+	void contextLoads() throws Exception {
+		assertThat(controller).isNotNull();
+	}
+	
+	@Test
+	void test1() throws Exception {
+		LocalDateTime date = LocalDateTime.of(2020, Month.JUNE, 10,0,0);
+		assertThat(controller.getProductDetails(date, 35455l, 1l)).isNotNull();
+	}
+
+}

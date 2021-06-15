@@ -1,0 +1,5 @@
+package com.demo.springboot.app.productos.models.service;
+
+public class PriceServiceImpl {
+
+}

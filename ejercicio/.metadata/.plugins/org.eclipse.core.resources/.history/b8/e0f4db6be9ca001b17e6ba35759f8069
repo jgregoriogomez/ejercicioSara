@@ -1,0 +1,45 @@
+package com.demo.springboot.app.productos.models.entity;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "prices")
+public class Price implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1099448425150093457L;
+
+	@Id
+	@Column(name = "BRAND_ID")
+	private Long brandId;
+	
+	@Column(name = "START_DATE")
+	private LocalDate startDate;
+	
+	@Column(name = "END_DATE")
+	private LocalDate endDate;
+	
+	@Column(name = "PRICE_LIST")
+	private Integer priceList;
+	
+	@Column(name = "PRODUCT_ID")
+	private Long productId;
+	
+	@Column(name = "PRIORITY")
+	private Short priority;
+	
+	@Column(name = "PRICE")
+	private Double price;
+	
+	@Column(name = "CURR")
+	private String currency;
+
+}

@@ -1,0 +1,15 @@
+package com.demo.springboot.app.productos.models.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.springboot.app.productos.models.dao.PriceDao;
+
+@Service
+public class PriceServiceImpl {
+	
+	@Autowired
+	private PriceDao priceDao;
+	
+
+}

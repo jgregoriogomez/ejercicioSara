@@ -1,0 +1,7 @@
+package com.demo.springboot.app.productos.dto;
+
+import java.io.Serializable;
+
+public class PriceDto implements Serializable {
+
+}

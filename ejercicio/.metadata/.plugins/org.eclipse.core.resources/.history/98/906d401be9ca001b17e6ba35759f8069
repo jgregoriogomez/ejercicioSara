@@ -1,0 +1,37 @@
+package com.demo.springboot.app.productos.dto;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+public class PriceDto implements Serializable {
+
+	
+	private Long brandId;
+	
+	@JsonFormat(pattern = "yyyy-MM-dd-HH.mm.ss")
+	private LocalDate startDate;
+	
+	@JsonFormat(pattern = "yyyy-MM-dd-HH.mm.ss")
+	private LocalDate endDate;
+	
+
+	private Integer priceList;
+	
+	
+	private Long productId;
+	
+	
+	private Short priority;
+	
+	
+	private Double price;
+	
+	
+	private String currency;
+}

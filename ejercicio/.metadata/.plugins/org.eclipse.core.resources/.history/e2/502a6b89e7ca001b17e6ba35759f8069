@@ -1,0 +1,7 @@
+package com.demo.springboot.app.productos.models.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface PriceDao extends CrudRepository<T, ID> {
+
+}

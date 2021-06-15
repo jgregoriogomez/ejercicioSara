@@ -1,0 +1,12 @@
+package com.demo.springboot.app.productos.models.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "prices")
+public class Prices implements Serializable{
+
+}

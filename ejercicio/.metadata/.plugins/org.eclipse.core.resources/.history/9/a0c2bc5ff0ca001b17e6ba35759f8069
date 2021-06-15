@@ -1,0 +1,14 @@
+package com.demo.springboot.app.productos.models.dao;
+
+import java.time.LocalDate;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.demo.springboot.app.productos.models.entity.Price;
+
+public interface PriceDao extends CrudRepository<Price, Long> {
+
+	@Query("select u from Price p where p.startDate>=?1 and p.endDate<=?1 and p.brandId=?2 and p.productId=?3")
+	public Price obtenerPorUsername(LocalDate date, Long brandId, Long productId);
+}
